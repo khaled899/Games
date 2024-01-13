@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(45deg, #132743, #5585b5);
+  color: white;
+  font-family: "Nerko One", cursive;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+section {
+  margin: 2% 0;
+}
+/* ----------------------------------------------Start Navbar---------------------------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  height: 100vh;
+  transition: 2s;
+  z-index: 999;
+}
+nav:hover {
+  width: 30%;
+}
+a:hover {
+  color: #f70776;
+}
+.navbar {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.navbar-brand {
+  width: 100%;
+  text-align: center;
+}
+.navbar-brand img {
+  width: 40%;
+}
+
+.navbar-brand {
+  animation: logo 1s infinite alternate;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nav-links {
+  width: 100%;
+  height: 120px;
+  margin-top: 30px;
+}
+.nav-links ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.nav-links ul li {
+  padding: 10px;
+}
+
+.drop-down {
+  position: relative;
+}
+.drop-links {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 50%;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 2s;
+}
+.drop-down:hover .drop-links {
+  opacity: 1;
+}
+/* ----------------------------------------------End Navbar---------------------------------------------- */
+/* ----------------------------------------------Start Banner---------------------------------------------- */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("Games/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay {
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-msg {
+  text-align: center;
+  line-height: 40px;
+}
+.welcome-msg span {
+  color: #f70776;
+}
+
+.btn-banner {
+  border: 1px solid #f70776;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  transition: 2s;
+}
+
+.btn-banner:hover {
+  border: none;
+  outline: none;
+  background-color: #f70776;
+}
+
+/* ----------------------------------------------End Banner---------------------------------------------- */
+
+.caption h3 {
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.caption h3::after {
+  content: "";
+  position: absolute;
+  left: 37%;
+  bottom: 0%;
+  width: 25%;
+  height: 0.08rem;
+  background-color: #f70776;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0 0 0;
+  height: 100%;
+}
+.card-img {
+  width: 100%;
+}
+.card-img img {
+  width: 100%;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 50%;
+  transition: 3s;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  bottom: 50%;
+  transition: 3s;
+}
+
+.card:hover.card::after {
+  transform: skewX(90deg);
+}
+.card:hover.card::before {
+  transform: skewX(90deg);
+}
+
+/* --------------------------------------------race start-------------------------------------------- */
+
+.car {
+  align-self: center;
+}
+.card-racing {
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0 0 0;
+  height: 100%;
+}
+.card-img {
+  width: 100%;
+}
+.card-img img {
+  width: 100%;
+}
+
+.card-racing::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 100%;
+  transition: 2s;
+}
+
+.card-racing:hover.card-racing::before {
+  top: 0;
+}
+
+.btn-race {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 2s;
+  padding: 3%;
+}
+
+.card-racing:hover .btn-race {
+  opacity: 1;
+}
+.btn-race:hover {
+  background-color: #f70776;
+  outline: none;
+  border: none;
+}
+
+/* --------------------------------------------race end-------------------------------------------- */
+/* --------------------------------------------zombie start-------------------------------------------- */
+.card-zombie {
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0 0 0;
+  height: 100%;
+}
+.card-img {
+  width: 100%;
+}
+.card-img img {
+  width: 100%;
+}
+
+.card-zombie::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 100%;
+  transition: 2s;
+}
+
+.card-zombie:hover.card-zombie::before {
+  top: 0;
+}
+
+.btn-race {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 2s;
+  padding: 3%;
+}
+
+.card-zombie:hover .btn-race {
+  opacity: 1;
+}
+.btn-race:hover {
+  background-color: #f70776;
+  outline: none;
+  border: none;
+}
+
+.zombie {
+  margin-top: 50px;
+}
+
+/* -----------------------------------------End zombie games----------------------------------------- */
+/* -----------------------------------------start action games----------------------------------------- */
+
+.card-action {
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0 0 0;
+  height: 100%;
+}
+.card-img {
+  width: 100%;
+}
+.card-img img {
+  width: 100%;
+}
+
+.card-action::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  left: 0;
+  top: -100%;
+  transition: 2s;
+}
+
+.card-action:hover.card-action::before {
+  top: 0%;
+}
+
+.btn-race {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 2s;
+  padding: 3%;
+}
+
+.card-action:hover .btn-race {
+  opacity: 1;
+}
+.btn-race:hover {
+  background-color: #f70776;
+  outline: none;
+  border: none;
+}
+
+/* -----------------------------------------end action games----------------------------------------- */
+/* -----------------------------------------start Form----------------------------------------- */
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us {
+  width: 70%;
+  background-color: white;
+  color: black;
+}
+.contact-caption {
+  text-shadow: 4px 4px 4px black;
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+
+  margin: 2%;
+}
+.contact-us-form input[type="text"],
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+.contact-us-form textarea {
+  border-radius: 5px;
+}
+.form-control:focus {
+  color: #f70776;
+  border: 3px solid #f70776;
+  box-shadow: 2px 2px 10px rgba(247, 7, 118, 0.7);
+  outline: none;
+}
+.btn {
+  position: relative;
+  width: 15%;
+  margin-top: 1%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  transition: 2s;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgba(247, 7, 118, 1);
+  color: white;
+}
+
+
+footer {
+  background: #000;
+  padding: 30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
